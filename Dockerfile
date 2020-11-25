@@ -4,7 +4,6 @@ RUN mkdir -p /node
 ADD . /node
 WORKDIR /node
 COPY package.json .
-RUN npm install
 
 EXPOSE 80
 
