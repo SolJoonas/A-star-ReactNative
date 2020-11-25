@@ -5,6 +5,6 @@ COPY package.json .
 RUN npm install
 
 EXPOSE 80
-CMD [ "npm", "start" ]
+CMD [ "expo", "start", "--web" ]
 
 COPY . .
