@@ -90,6 +90,7 @@ export default class app extends React.Component{
 }
 
 //tutkii parhaan reitin aloituksesta lopetukseen. 
+
 function aStar(current){
 
   var CurrentID = current.ID;
@@ -131,7 +132,7 @@ function aStar(current){
           OpenSet.push(NeighbourID);
         }
       }
-      
+    
     }
     ClosedSet.push(CurrentID);
     removeFromOpenList(CurrentID);
@@ -305,7 +306,6 @@ function drawmap(item){
   }
   return(blockstyle);
 }
-  
 // lasketaan matka tähän functioon lähetetystä solusta maaliin. 
 function Distance(location){
   return Math.abs(location[0]-end[0])+Math.abs(location[1]-end[1]); // toimii vain jos aloitus on vasemmassa yläkulmassa
