@@ -90,7 +90,6 @@ export default class app extends React.Component{
 }
 
 //tutkii parhaan reitin aloituksesta lopetukseen. 
-
 function aStar(current){
 
   var CurrentID = current.ID;
@@ -147,7 +146,6 @@ function removeFromOpenList(removeID){
     }
   }
 }
-
 
 // tutkii onko solu Closedsetissä
 function InClosedSet(id){
@@ -211,9 +209,7 @@ function cell(nx,ny,random,idnum){
   return {'x':x,'y':y,'wall':wall, 'Neighbours':blocks, 'Location':loc , 'score':score,'ID':ID, 'cameFrom':cameFrom,'trail':trail};
 }
 
-
 // tämä voisi olla parempi mutta toimii kuitenkin toistaiseksi.
-
 function Neighbours(x, y, id){
 
   var NL = []; // tahän kootaan lista naapureista
@@ -272,7 +268,6 @@ function wallorNot(random,loc){
   }
 }
 
-
 //luo solut karttaan.
 function Mapinit(){
   var num = 0;
@@ -310,6 +305,7 @@ function drawmap(item){
   }
   return(blockstyle);
 }
+  
 // lasketaan matka tähän functioon lähetetystä solusta maaliin. 
 function Distance(location){
   return Math.abs(location[0]-end[0])+Math.abs(location[1]-end[1]); // toimii vain jos aloitus on vasemmassa yläkulmassa
